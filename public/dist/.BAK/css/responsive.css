@@ -1,0 +1,264 @@
+@media screen and (max-width:1024px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+}
+
+@media screen and (max-width:991px) {}
+
+@media screen and (max-width:768px) {
+    .overlay{
+        -webkit-overflow-scrolling: touch;
+    }
+    .logo {
+        margin: 1em 0;
+        width: 55%;
+        left: 0;
+    }
+
+    #hamburger {
+        display: inline-block;
+        float: right;
+    }
+
+    .breadcrumbs {
+        width: 35px;
+        padding: 0 0.2em;
+    }
+
+    .icon-label-nav {
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    p.specials {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 35px;
+        text-align: left;
+    }
+
+    h1.title-page {
+        text-align: center !important;
+    }
+
+    ul,
+    ul li {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    /*
+    .header.active {
+        position: fixed;
+    }*/
+
+    .logo.logo-flat-full {
+        width: 75%;
+    }
+
+    .bgimg.left {
+        background-position: center;
+    }
+
+    /*.section{
+        padding-top: 0 !important;
+    }*/
+
+    .section#homepageVideo .bg-homepageVideo.bg-animate-homepage.active,
+    .section#homepageLineUp .bg-homepageLineUp.bg-animate-homepage.active {
+        background-size: cover;
+    }
+
+    .section#homepageTicket .bg-homepageTicket.bg-animate-homepage.active {
+        background-size: 25% 30%;
+    }
+
+    .main-title {
+        top: 0;
+        margin: 1em 0;
+    }
+
+    .main-title h1 {
+        font-size: 35px;
+        text-align: left;
+        margin-bottom: 0.5em;
+    }
+
+    svg {
+        width: 80px;
+    }
+
+    #video {
+        height: 260px !important;
+        top: -40px;
+    }
+
+    #btn-gallery {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    #btn-ticket img {
+        width: 100%;
+    }
+
+    i.icn-down {
+        top: 18px;
+    }
+
+    .item-boxgrid .overlay.soft {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+        transform: scaleY(1);
+    }
+
+    .overlay.soft h3 {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    ul.nav-lineups li {
+        font-size: 18px;
+    }
+
+    .main.active>.main-inside.active>#about .card .card-body {
+        font-size: 13px;
+    }
+
+    .text {
+        margin-top: 2em;
+    }
+
+    .text ul {
+        margin-bottom: 1em;
+    }
+
+    .video-js {
+        margin: 2em 0;
+    }
+
+    .header.homepage {
+        position: relative;
+    }
+
+    #homepage #homepageVideo .section .centeralign,
+    #homepage #homepageGal2018 .section .centeralign {
+        display: block;
+    }
+
+    #homepage #homepageVideo .section .centeralign-middle,
+    #homepage #homepageGal2018 .section .centeralign-middle,
+        {
+        display: block;
+    }
+
+    .section {
+        height: auto !important;
+        /*margin: 0 1em;*/
+    }
+
+    /*
+    #about .header{
+        height: 180px;
+    }*/
+
+    /* .main.active>.main-inside.active>#about .card .card-header{
+        top: 0;
+    }*/
+
+    .main.active>.main-inside.active>#about .card .card-header {
+        width: 100%;
+        padding: 1em;
+        left: -15px;
+        display: block;
+    }
+
+    .main.active>.main-inside.active>#about .card .card-header h6 {
+        font-size: 13px;
+        text-align: left;
+    }
+
+
+    .main.active>.main-inside.active>#about .card {
+        top: 0px;
+        margin-bottom: 0;
+    }
+
+    .tagline {
+        margin-top: 2.5em;
+    }
+
+    #homepageGal2018>.container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .breadcrumbs label {
+        text-align: center;
+        top: 0 !important;
+        bottom: 0 !important;
+    }
+
+    #lineups .footer {
+        /*position: absolute;*/
+        bottom: -90px;
+    }
+
+    #headerChild .header{
+        position: absolute;
+        margin-bottom: 3em;
+    }
+
+    .js-cookie-consent.cookie-consent {
+        width: 100%;
+        bottom: calc(2vh + 5px);
+        right: 0;
+    }
+
+    #gallery #gallery-list a {
+        height: auto !important;
+    }
+
+    #artistDetail .footer {
+        /*position: absolute;*/
+        bottom: 0;
+    }
+
+    #homepage .bg-animate-homepage.active, .bg-animate-slide.active {
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main .main-inside.active .bg-lineups.active{
+        background-size: cover;
+    }
+
+    #show .item-boxgrid,
+    #talks .item-boxgrid{
+        height: 25vh;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .logo {
+        margin: 1em 0;
+        width: 55%;
+        left: 0;
+    }
+
+@media screen and (max-width:375px) {}
