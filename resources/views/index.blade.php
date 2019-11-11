@@ -116,7 +116,7 @@
                 @endforeach
                 <div class="col-md-12 my-3">
                     <p class="text-left text-white mb-2">*All ticket purchase will go through official ticket sales partner</p>
-                    <p class="text-left text-white">*VIP ticket valid for 10 days re-entry & more suprises</p>
+                    <p class="text-left text-white">*VIP ticket valid for 10 days re-entry & more surprises</p>
                 </div>
             </div>
         </div>
@@ -156,6 +156,14 @@
     </div>
     @include('footer')
 </div>
-
-
+@if(!isset($_COOKIE['wot2019_BoxCookies']))
+<div class="js-cookie-consent cookie-consent">
+    <span class="cookie-consent__message">
+        We use cookies to provide the best experience.<br>By accessing this site, you have agreed to our <a href="https://www.pmi.com/legal/cookie-notice" target="_blank"> use of cookies </a>
+    </span>
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        GOT IT
+    </button>
+</div>
+@endif
 @endsection

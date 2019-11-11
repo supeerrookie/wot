@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<img src="http://localhost:8000/logo-wave.png" alt="Admin logo" width="120">',
+    'logo' => '<img src="https://waveoftomorrow.id/logo-wave.png" alt="Admin logo" width="120">',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<img src="http://localhost:8000/favicon-32x32.png" alt="Admin logo">',
+    'logo-mini' => '<img src="https://waveoftomorrow.id/favicon-32x32.png" alt="Admin logo">',
 
     /*
     |--------------------------------------------------------------------------
