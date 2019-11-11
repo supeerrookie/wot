@@ -20,20 +20,15 @@
         <div class="container">
             <div class="row no-gutters my-sm-1 my-md-0">
                 <div class="col-sm-12 col-md-6 mt-sm-0 mt-md-0">
-                    <video preload='none' id='videoTeaserHomepage' class='video-js bg-video vjs-default-skin vjs-big-play-centered box-shadow' controls width='100%' height='100%' poster="{{ asset('uploads/video/intro.jpg') }}" data-setup='{"fluid": true}'>
+                    <video preload='none' id='videoTeaserHomepage' class='video-js bg-video vjs-default-skin vjs-big-play-centered box-shadow' controls width='100%' height='100%' poster="{{ asset('uploads/video/intro.jpg') }}" data-setup='{"fluid": true}' onclick="dataLayer.push({ 'event': 'playvideo', 'event_category': '/',
+                                'event_action': 'video landing', 'event_label': 'start',
+                                });">
                         <source src="{{ asset('uploads/video/teaser.mp4') }}" type='video/mp4'>
                         <source src="{{ asset('uploads/video/teaser.webm') }}" type='video/webm'>
                         <p class='vjs-no-js'>
                             To view this video please enable JavaScript, and consider upgrading to a web browser that
                             <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
                         </p>
-                        <script>
-                            document.getElementById("videoTeaserHomepage").addEventListener("click", function () {
-                                dataLayer.push({ 'event': 'playvideo', 'event_category': '/',
-                                'event_action': 'video landing', 'event_label': 'start',
-                                });
-                            });
-                        </script>
                     </video>
                 </div>
                 <div class="col-sm-12 col-md-6 mt-sm-0 mt-md-0 text">
@@ -68,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-9 col-xs-10 col-sm-9 col-md-8">
-                        <a id="btn-ticket" class="btn">
+                        <a id="btn-ticket" class="btn" href="#homepageTicket">
                             <img class="img-fluid btn-img" src="{{ asset('./uploads/images/ticket/secure-ticket-shadow.png') }}">
                         </a>
                     </div>
