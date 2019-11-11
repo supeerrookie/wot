@@ -89,7 +89,7 @@
             </div>
             <div class="row no-gutters">
                 @foreach($lineup as $lineups)
-                <a href="artist-detail/{{ $lineups->slug }}" class="col-6 col-sm-6 col-md-4 fullheight x-45 item-boxgrid mx-auto">
+                <a href="artist-detail/{{ $lineups->slug }}" class="col-6 col-sm-6 col-md-4 fullheight x-45 item-boxgrid mx-auto" onclick="dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': '{{ $lineups->name }}'});">
                     <div class="bgimg small-padds border-grey lazy" style="background-image:url('{{asset('uploads/'.substr_replace( $lineups->image , '-large' , strrpos($lineups->image, '.'), 0 )) }} ');" >
                         <div class="overlay soft">
                             <div class="centeralign">
@@ -99,17 +99,11 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-                    dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': '{{ $lineups->name }}'});
-                    </script>
                 </a>
                 @endforeach
             </div>
             <div class="col-md-4 mx-auto mb-md-3">
-                <a id="btn-see-more" data-id="lineups" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE
-                    <script>
-                    dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': 'see more'});
-                    </script>
+                <a id="btn-see-more" data-id="lineups" class="btn btn-transparent btn-lg btn-block text-center" onclick="dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': 'see more'});">SEE MORE
                 </a>
             </div>
         </div>
@@ -122,13 +116,10 @@
             <div class="row">
                 @foreach($ticket as $tix)
                 <div id="img-ticket" class="col-6 col-md-3 fullheight halfheight mb-sm-1">
-                    <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket" rel="noopener noreferrer">
+                    <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket" rel="noopener noreferrer" onclick="dataLayer.push({ 'event': 'ticketbox', 'event_category': '/', 'event_action': 'Ticket','event_label': '{{$tix->slug}}'
+                        });">
                         <div class="bgimg left contain btn-img btn-ticket-block" style="background-image:url({{ asset('./uploads/'.$tix->image) }})">
                         </div>
-                        <script>
-                        dataLayer.push({ 'event': 'ticketbox', 'event_category': '/', 'event_action': 'Ticket','event_label': '{{$tix->slug}}'
-                        });
-                        </script>
                     </a>
                 </div>
                 @endforeach
@@ -148,24 +139,16 @@
                 <div class="col-md-12">
                     <div id="gallery-list" class="row no-gutters">
                         @foreach($gals as $galz)
-                        <a data-fancybox="{{$galz->year}}" href="{{asset('uploads/'.$galz->image) }}" class="col-6 col-md-4 lazy">
-                            <img src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}" alt-text="{{$galz->title}}" class="img-fluid lazy border-grey" data-src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}">
-                            <script>
-                                dataLayer.push({'event': 'gallery', 'event_category': '/',
+                        <a data-fancybox="{{$galz->year}}" href="{{asset('uploads/'.$galz->image) }}" class="col-6 col-md-4 lazy" onclick="dataLayer.push({'event': 'gallery', 'event_category': '/',
                                     'event_action': 'Gallery', 'event_label': '{{ $galz->title }}'
-                                });
-                            </script>
+                                });">
+                            <img src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}" alt-text="{{$galz->title}}" class="img-fluid lazy border-grey" data-src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}">
                         </a>
                         @endforeach
                     </div>
                 </div>
                 <div class="col-md-4 mx-auto mb-md-3">
-                    <a id="btn-gallery" data-id="gallery" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE
-                        <script>
-                            dataLayer.push({'event': 'gallery', 'event_category': '/',
-                                'event_action': 'Gallery', 'event_label': 'see more'
-                            });
-                        </script>
+                    <a id="btn-gallery" data-id="gallery" class="btn btn-transparent btn-lg btn-block text-center" onlick="dataLayer.push({'event': 'gallery', 'event_category': '/', 'event_action': 'Gallery', 'event_label': 'see more'});">SEE MORE
                     </a>
                 </div>
             </div>
