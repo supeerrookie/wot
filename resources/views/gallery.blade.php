@@ -41,6 +41,11 @@
                             <li>
                                 <a rel="{{ $galyz->year }}" href="{{asset('uploads/'.$galyz->image) }}" class="">
                                      <img src="{{asset('uploads/'.substr_replace( $galyz->image , '-medium' , strrpos($galyz->image, '.'), 0 )) }}" alt-text="{{$galyz->title}}" class="img-fluid lazy border-grey" data-src="{{asset('uploads/'.substr_replace( $galyz->image , '-medium' , strrpos($galyz->image, '.'), 0 )) }}">
+                                        <script>
+                                            dataLayer.push({'event': 'gallery', 'event_category': '/gallery',
+                                                'event_action': 'Gallery', 'event_label': '{{ $galyz->title }}'
+                                            });
+                                        </script>
                                 </a>
                                 <div class="card text-black p-2 text-left">
                                     <h3>{{ $galyz->title }}</h3>
@@ -56,6 +61,11 @@
                             @foreach($galy as $galyz)
                             <a data-fancybox="{{$galyz->year}}" href="{{asset('uploads/'.$galyz->image) }}" class="col-6 col-md-4 p-2">
                                  <img src="{{asset('uploads/'.substr_replace( $galyz->image , '-large' , strrpos($galyz->image, '.'), 0 )) }}" alt-text="{{$galyz->title}}" class="img-fluid lazy border-grey" data-src="{{asset('uploads/'.substr_replace( $galyz->image , '-large' , strrpos($galyz->image, '.'), 0 )) }}">
+                                 <script>
+                                    dataLayer.push({'event': 'gallery', 'event_category': '/gallery',
+                                        'event_action': 'Gallery', 'event_label': '{{ $galyz->title }}'
+                                    });
+                                </script>
                             </a>
                             @endforeach
                         </div>

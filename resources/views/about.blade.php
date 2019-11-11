@@ -58,7 +58,12 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="gmap_canvas box-shadow" style="width: 100%; height: 100%;">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0761317735646!2d106.79726431476928!3d-6.253699995473358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1182c9c42df%3A0x15973de4b1c09abd!2sThe%20Tribrata!5e0!3m2!1sen!2sid!4v1567328976184!5m2!1sen!2sid" width="100%" height="180px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0761317735646!2d106.79726431476928!3d-6.253699995473358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1182c9c42df%3A0x15973de4b1c09abd!2sThe%20Tribrata!5e0!3m2!1sen!2sid!4v1567328976184!5m2!1sen!2sid" width="100%" height="180px" frameborder="0" style="border:0;" allowfullscreen=""> 
+                                    </iframe>
+                                    <script>
+                                        dataLayer.push({'event': 'map','event_category': '/about', 
+                                        'event_action': 'Map','event_label': 'Click on Map' });
+                                    </script>
                                 </div>
                             </div>
                         </div>

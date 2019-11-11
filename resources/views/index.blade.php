@@ -27,6 +27,13 @@
                             To view this video please enable JavaScript, and consider upgrading to a web browser that
                             <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
                         </p>
+                        <script>
+                            document.getElementById("videoTeaserHomepage").addEventListener("click", function () {
+                                dataLayer.push({ 'event': 'playvideo', 'event_category': '/',
+                                'event_action': 'video landing', 'event_label': 'start',
+                                });
+                            });
+                        </script>
                     </video>
                 </div>
                 <div class="col-sm-12 col-md-6 mt-sm-0 mt-md-0 text">
@@ -92,11 +99,18 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                    dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': '{{ $lineups->name }}'});
+                    </script>
                 </a>
                 @endforeach
             </div>
             <div class="col-md-4 mx-auto mb-md-3">
-                <a id="btn-see-more" data-id="lineups" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE</a>
+                <a id="btn-see-more" data-id="lineups" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE
+                    <script>
+                    dataLayer.push({'event': 'lineup','event_category': '/','event_action': 'Lineup','event_label': 'see more'});
+                    </script>
+                </a>
             </div>
         </div>
     </div>
@@ -111,12 +125,16 @@
                     <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket" rel="noopener noreferrer">
                         <div class="bgimg left contain btn-img btn-ticket-block" style="background-image:url({{ asset('./uploads/'.$tix->image) }})">
                         </div>
+                        <script>
+                        dataLayer.push({ 'event': 'ticketbox', 'event_category': '/', 'event_action': 'Ticket','event_label': '{{$tix->slug}}'
+                        });
+                        </script>
                     </a>
                 </div>
                 @endforeach
                 <div class="col-md-12 my-3">
                     <p class="text-left text-white mb-2">*All ticket purchase will go through official ticket sales partner</p>
-                    <p class="text-left text-white">*VIP ticket valid for 10 days re-entry & more surprises</p>
+                    <p class="text-left text-white">*VIP ticket valid for 10 days re-entry & more suprises</p>
                 </div>
             </div>
         </div>
@@ -132,12 +150,23 @@
                         @foreach($gals as $galz)
                         <a data-fancybox="{{$galz->year}}" href="{{asset('uploads/'.$galz->image) }}" class="col-6 col-md-4 lazy">
                             <img src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}" alt-text="{{$galz->title}}" class="img-fluid lazy border-grey" data-src="{{asset('uploads/'.substr_replace( $galz->image , '-large' , strrpos($galz->image, '.'), 0 )) }}">
+                            <script>
+                                dataLayer.push({'event': 'gallery', 'event_category': '/',
+                                    'event_action': 'Gallery', 'event_label': '{{ $galz->title }}'
+                                });
+                            </script>
                         </a>
                         @endforeach
                     </div>
                 </div>
                 <div class="col-md-4 mx-auto mb-md-3">
-                    <a id="btn-gallery" data-id="gallery" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE</a>
+                    <a id="btn-gallery" data-id="gallery" class="btn btn-transparent btn-lg btn-block text-center" >SEE MORE
+                        <script>
+                            dataLayer.push({'event': 'gallery', 'event_category': '/',
+                                'event_action': 'Gallery', 'event_label': 'see more'
+                            });
+                        </script>
+                    </a>
                 </div>
             </div>
         </div>
@@ -159,11 +188,12 @@
 @if(!isset($_COOKIE['wot2019_BoxCookies']))
 <div class="js-cookie-consent cookie-consent">
     <span class="cookie-consent__message">
-        We use cookies to provide the best experience.<br>By accessing this site, you have agreed to our <a href="https://www.pmi.com/legal/cookie-notice" target="_blank"> use of cookies </a>
+        We use cookies to provide the best experience.<br>By accessing this site, you have agreed to our <a href="https://www.pmi.com/legal/cookie-notice" target="_blank" rel="noopener noreferrer"> use of cookies </a>
     </span>
     <button class="js-cookie-consent-agree cookie-consent__agree">
         GOT IT
     </button>
 </div>
 @endif
+
 @endsection
