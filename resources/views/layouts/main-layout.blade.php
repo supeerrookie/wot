@@ -34,8 +34,10 @@
     <meta content="#ffffff" name="theme-color">
     <link rel="stylesheet" href="{{ asset('css/addon.css') }}" type="text/css" media="all">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css" media="all">
+    <script type="text/javascript" src="{{ asset('js/device-uuid.min.js') }}"></script>
     <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NVV6K6Q');ga('create', 'UA-145160224-1', 'auto', {userId: 'User_ID_WaveofTomorrow'});window.dataLayer=window.dataLayer||[],window.dataLayer.push({userId:'User_ID_WaveofTomorrow'});
+        var userid = new DeviceUUID().get();
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NVV6K6Q');window.dataLayer=window.dataLayer||[],window.dataLayer.push({userId:userid});
     </script>
 </head>
 

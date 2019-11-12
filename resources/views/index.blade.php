@@ -109,8 +109,7 @@
             <div class="row">
                 @foreach($ticket as $tix)
                 <div id="img-ticket" class="col-6 col-md-3 fullheight halfheight mb-sm-1">
-                    <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket" rel="noopener noreferrer" onclick="dataLayer.push({ 'event': 'ticketbox', 'event_category': '/', 'event_action': 'Ticket','event_label': '{{$tix->slug}}'
-                        });">
+                    <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket" rel="noopener noreferrer" onclick="dataLayer.push({ 'event': 'ticketbox', 'event_category': '/', 'event_action': 'Ticket','event_label': '{{$tix->slug}}'});">
                         <div class="bgimg left contain btn-img btn-ticket-block" style="background-image:url({{ asset('./uploads/'.$tix->image) }})">
                         </div>
                     </a>
