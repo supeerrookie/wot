@@ -20,9 +20,7 @@
         <div class="container">
             <div class="row no-gutters my-sm-1 my-md-0">
                 <div class="col-sm-12 col-md-6 mt-sm-0 mt-md-0">
-                    <video preload='none' id='videoTeaserHomepage' class='video-js bg-video vjs-default-skin vjs-big-play-centered box-shadow' controls width='100%' height='100%' poster="{{ asset('uploads/video/intro.jpg') }}" data-setup='{"fluid": true}' onclick="dataLayer.push({ 'event': 'playvideo', 'event_category': '/',
-                                'event_action': 'video landing', 'event_label': 'start',
-                                });">
+                    <video preload='none' id='videoTeaserHomepage' class='video-js bg-video vjs-default-skin vjs-big-play-centered box-shadow' controls width='100%' height='100%' poster="{{ asset('uploads/video/intro.jpg') }}" data-setup='{"fluid": true}'>
                         <source src="{{ asset('uploads/video/teaser.mp4') }}" type='video/mp4'>
                         <source src="{{ asset('uploads/video/teaser.webm') }}" type='video/webm'>
                         <p class='vjs-no-js'>
@@ -63,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-9 col-xs-10 col-sm-9 col-md-8">
-                        <a id="btn-ticket" class="btn" href="#homepageTicket">
+                        <a id="btn-ticket" class="btn" href="#homepageTicket" onclick="dataLayer.push({'event': 'ticket','event_category':'/','event_action': 'Ticket','event_label': 'Secure Your Ticket'});">
                             <img class="img-fluid btn-img" src="{{ asset('./uploads/images/ticket/secure-ticket-shadow.png') }}">
                         </a>
                     </div>
