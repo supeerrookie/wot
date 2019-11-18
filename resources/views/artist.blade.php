@@ -71,7 +71,7 @@
             </div>
             <div class="row no-gutters">
                 <div class="col-8 col-sm-8 col-md-4">
-                    <a target="_blank" id="btn-ticket" class="btn" href='https://kiostix.com/id/event/731/wave-of-tomorrow' onclick="dataLayer.push({'event': 'ticket','event_category': '/artist-detail/{{ $dets->name }}', 'event_action': 'Ticket', 'event_label': 'Secure Your Ticket'});">
+                    <a target="_blank" id="btn-ticket-artist-detail" class="btn" href='https://kiostix.com/id/event/731/wave-of-tomorrow' onclick="dataLayer.push({'event': 'ticket','event_category': '/artist-detail/{{ $dets->name }}', 'event_action': 'Ticket', 'event_label': 'Secure Your Ticket'});">
                         <img class="img-fluid btn-img" src="{{ asset('./uploads/images/ticket/secure-ticket-shadow.png') }}">
                     </a>
                 </div>
