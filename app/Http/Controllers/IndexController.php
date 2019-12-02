@@ -35,7 +35,7 @@ class IndexController extends Controller
     public function index(){
         $route = 'homepage';
         $page = Page::select('id')->where('title', $route)->first();
-    	$lineup = Lineups::where(['lineups_type' => 'sight'])->inRandomOrder()->limit(6)->get();
+    	$lineup = Lineups::where(['lineups_type' => 'sight'])->where(['status'=>1, 'highlights'=>1])->limit(6)->orderBy('created_at', 'asc')->get();
         $gals = Gallery::select('id','title','slug','image','year','dateshow','description')->orderBy('year', 'asc')->limit(8)->get();
         $ticket = PageContent::select('title','slug','image','url')->where(['id_page'=> $page->id, 'status'=>1])->get();
     	return view('index')->with(compact('lineup', 'gals', 'ticket'));

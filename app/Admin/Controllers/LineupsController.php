@@ -85,10 +85,16 @@ class LineupsController extends Controller
         $grid->id('ID')->sortable();
         $grid->name('Name');
         $grid->installation_name('Installation Name');
+        $grid->visual('Visual Pict By');
         $grid->stage('Stage');
         $grid->slug('Slug');
         $grid->lineups_type('Type')->sortable();
         $grid->image()->lightbox(['zooming' => true, 'width' => 50, 'height' => 50]);
+        $top6 = [
+            'on'  => ['value' => 1, 'text' => 'ACTIVE', 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
+        ];
+        $grid->highlights()->switch($top6);
         $states = [
             'on'  => ['value' => 1, 'text' => 'ACTIVE', 'color' => 'success'],
             'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
@@ -142,6 +148,11 @@ class LineupsController extends Controller
         $form->text('slug', 'Slug');
         $form->date('perform', 'Date Perform');
         $form->time('time_perform', 'Time Perform')->format('HH:mm:ss');
+        $top6 = [
+            'on'  => ['value' => 1, 'text' => 'ACTIVE', 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => 'NO', 'color' => 'danger'],
+        ];
+        $form->switch('highlights', 'TOP 6 LINEUPS')->states($top6);
         $stage = [
             'Main Stage' => 'Main Stage',
             'Sharing Session' => 'Sharing Session',

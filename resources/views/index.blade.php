@@ -1,6 +1,5 @@
 @extends('layouts.main-layout')
 @section('content')
-<?php  setcookie("wot2019_BoxCookies", "xLnK79L9uiEn1cVmxjDG" , time() + (365 * 10), "/");  ?>
 <div id="homepage" class="overlay active">
     <div class="bgimg lazy bg-fixed bg-desktop opacity-85 bg-homepageVideo bg-animate-homepage parallax"></div>
     <div class="bgimg lazy bg-fixed bg-mobile opacity-85 bg-homepageVideo-mobile bg-animate-homepage parallax"></div>
@@ -160,15 +159,4 @@
     </div>
     @include('footer')
 </div>
-@if(!isset($_COOKIE['wot2019_BoxCookies']))
-<div class="js-cookie-consent cookie-consent">
-    <span class="cookie-consent__message">
-        We use cookies to provide the best experience.<br>By accessing this site, you have agreed to our <a href="https://www.pmi.com/legal/cookie-notice" target="_blank" rel="noopener noreferrer"> use of cookies </a>
-    </span>
-    <button class="js-cookie-consent-agree cookie-consent__agree">
-        GOT IT
-    </button>
-</div>
-@endif
-
 @endsection

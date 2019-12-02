@@ -21,6 +21,10 @@
             <div class="col-sm-12 col-md-8">
                 <h2 class="mt-2 bold">{{ $dets->name }}</h2>
                 <h5 class="font-color-grey">{{ $dets->installation_name }}</h5>
+                @if(!empty($dets->visual))
+                <h5 class="font-color-grey">Stuning Visual By: {{ $dets->visual }}</h5>
+                @else
+                @endif
             </div>
             <div class="col-5 col-sm-12 col-md-4 mt-md-3">
                 <div class="text-white text-right date-perform">
