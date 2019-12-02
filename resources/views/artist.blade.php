@@ -22,7 +22,7 @@
                 <h2 class="mt-2 bold">{{ $dets->name }}</h2>
                 <h5 class="font-color-grey">{{ $dets->installation_name }}</h5>
                 @if(!empty($dets->visual))
-                <h5 class="font-color-grey">Stuning Visual By: {{ $dets->visual }}</h5>
+                <h5 class="font-color-grey">Stunning Visual By: {{ $dets->visual }}</h5>
                 @else
                 @endif
             </div>
