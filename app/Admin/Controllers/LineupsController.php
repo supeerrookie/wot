@@ -139,6 +139,7 @@ class LineupsController extends Controller
         ];
         $form->radio('lineups_type', 'Type')->options($type)->required();
         $form->text('installation_name', 'Insatallation Name');
+        $form->text('visual', 'Visual By');
         $form->ckeditor('bio', 'Biography')->rows(5);
         $form->ckeditor('detail', 'Detail Biography')->rows(5);
         $form->image('image')->uniqueName()->move('/images/lineup')->thumbnail([
