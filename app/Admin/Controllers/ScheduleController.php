@@ -130,12 +130,10 @@ class ScheduleController extends Controller
         $form->ckeditor('installation_detail', 'Insatallation Detail');
         $form->text('id_day', 'Day Event');
         $class = [
-            'align-items-start' => 'Top',
-            'align-items-center' => 'Center',
-            'align-items-end' => 'Bottom'
+            'link-disable' => 'Link Disable',
+            '' => 'none',
         ];
         $form->radio('class_add', 'Special Class')->options($class);
-
         $form->date('dateperform', 'Date Perform');
         $form->time('timeperform', 'Time Perform')->format('HH:mm:ss');
         $states = [

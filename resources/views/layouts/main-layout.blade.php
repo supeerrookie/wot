@@ -85,9 +85,13 @@
     <div data-scroll class="main">
         @yield('content')
     </div>
-     <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVV6K6Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <script src="https://optanon.blob.core.windows.net/langswitch/e8f7563b-1588-47f4-ac9c-3947bfb34bb4.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/modernizr-custom.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/core.js') }}"></script>

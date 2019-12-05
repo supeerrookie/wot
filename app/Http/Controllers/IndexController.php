@@ -43,7 +43,7 @@ class IndexController extends Controller
 
     public function about(){
     	$faq = Faq::select('id','title','slug','description','status')->where(['status'=>1])->get();
-        $kurator = DB::table('lineups')->select('name','slug','image','bio','description')->where('lineups_type', 'CURATOR')->limit(1)->get();
+        $kurator = DB::table('lineups')->select('name','slug','image','bio','description')->where('lineups_type', 'CURATOR')->limit(2)->get();
     	return view('about')->with(compact('faq','kurator'));
     }
 
