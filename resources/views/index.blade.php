@@ -149,7 +149,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-sm-8 col-md-6 mx-auto">
-                    <ul class="partners">
+                    <ul class="partners index">
                         <li><p>OFFICIAL TICKETING PARTNER:</p></li>
                         <li><a target="_blank" href="https://kiostix.com/id/event/731/wave-of-tomorrow"><img class="img-fluid" src="{{ asset('./uploads/images/icon/icn-kiostix.png') }}"></a></li>
                     </ul>
