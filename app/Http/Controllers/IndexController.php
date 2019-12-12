@@ -35,17 +35,21 @@ class IndexController extends Controller
     public function index(){
         $route = 'homepage';
         $page = Page::select('id')->where('title', $route)->first();
-    	$lineup = Lineups::where(['lineups_type' => 'sight'])->where(['status'=>1, 'highlights'=>1])->limit(6)->orderBy('created_at', 'asc')->get();
+        $lineup = DB::table('lineups')->select('name','slug','image','status')->where(['lineups_type' => 'sight'])->where(['status'=>1, 'highlights'=>1])->orderBy('position','asc')->limit(6)->get();
         $gals = Gallery::select('id','title','slug','image','year','dateshow','description')->orderBy('year', 'asc')->limit(8)->get();
         $ticket = PageContent::select('title','slug','image','url')->where(['id_page'=> $page->id, 'status'=>1])->get();
-    	return view('index')->with(compact('lineup', 'gals', 'ticket'));
+        return view('index')->with(compact('lineup', 'gals', 'ticket'));
     }
 
     public function about(){
-    	$faq = Faq::select('id','title','slug','description','status')->where(['status'=>1])->get();
+        $route = 'about';
+        $page = Page::select('id')->where('title', $route)->first();
+        $faq = Faq::select('id','title','slug','description','status')->where(['status'=>1])->get();
         $kurator = DB::table('lineups')->select('name','slug','image','bio','description')->where('lineups_type', 'CURATOR')->limit(2)->get();
-    	return view('about')->with(compact('faq','kurator'));
+        $content = PageContent::select('title','slug','image','url', 'class_add')->where(['id_page'=> $page->id, 'status'=>1])->get();
+        return view('about')->with(compact('faq','kurator', 'content'));
     }
+
 
     public function gallery(){
         $route = 'gallery';

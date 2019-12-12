@@ -81,11 +81,11 @@ class LineupsController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Lineups);
-
         $grid->id('ID')->sortable();
         $grid->name('Name');
         $grid->installation_name('Installation Name');
         $grid->visual('Visual Pict By');
+        $grid->position('Position')->sortable();
         $grid->stage('Stage');
         $grid->slug('Slug');
         $grid->lineups_type('Type')->sortable();
@@ -135,7 +135,8 @@ class LineupsController extends Controller
             'Artist' => 'Artist',
             'Show' => 'Show',
             'Talks' => 'Talks',
-            'CURATOR'  => 'CURATOR *(Special Mona Liem Only)',
+            'ART CURATOR'  => 'ART CURATOR',
+            'MUSIC CURATOR'  => 'MUSIC CURATOR',
         ];
         $form->radio('lineups_type', 'Type')->options($type)->required();
         $form->text('installation_name', 'Insatallation Name');
@@ -146,6 +147,7 @@ class LineupsController extends Controller
             'medium' => [300, null],
             'large'  => [600, null],
         ]);
+        $form->number('position', 'Position Lineups');
         $form->text('slug', 'Slug');
         $form->date('perform', 'Date Perform');
         $form->time('time_perform', 'Time Perform')->format('HH:mm:ss');

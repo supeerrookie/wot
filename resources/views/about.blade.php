@@ -55,6 +55,13 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="col-8 no-padding booklet">
+                                    @foreach($content as $tix)
+                                     <a target="_blank" href="{{$tix->url}}" id="{{$tix->slug}}" class="btn btn-ticket {{$tix->class_add}}" rel="noopener">
+                                        <img class="img-fluid" src="{{ asset('./uploads/'.$tix->image) }}">
+                                    </a>
+                                    @endforeach
+                                </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="gmap_canvas box-shadow" style="width: 100%; height: 100%; display: block;">

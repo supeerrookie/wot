@@ -95,6 +95,7 @@
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/modernizr-custom.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/core.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/qrious.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/mix.js') }}"></script>
 </body>
 </html>
