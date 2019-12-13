@@ -30,12 +30,14 @@ use App\PageContent;
 
 use App\Schedule;
 
+use Response;
+
 class IndexController extends Controller
 {
     public function index(){
         $route = 'homepage';
         $page = Page::select('id')->where('title', $route)->first();
-        $lineup = DB::table('lineups')->select('name','slug','image','status')->where(['lineups_type' => 'sight'])->where(['status'=>1, 'highlights'=>1])->orderBy('position','asc')->limit(6)->get();
+        $lineup = DB::table('lineups')->select('name','slug','image','status')->where(['lineups_type' => 'sight'])->where(['status'=>1, 'highlights'=>1])->orderBy('position')->limit(6)->get();
         $gals = Gallery::select('id','title','slug','image','year','dateshow','description')->orderBy('year', 'asc')->limit(8)->get();
         $ticket = PageContent::select('title','slug','image','url')->where(['id_page'=> $page->id, 'status'=>1])->get();
         return view('index')->with(compact('lineup', 'gals', 'ticket'));
@@ -45,11 +47,10 @@ class IndexController extends Controller
         $route = 'about';
         $page = Page::select('id')->where('title', $route)->first();
         $faq = Faq::select('id','title','slug','description','status')->where(['status'=>1])->get();
-        $kurator = DB::table('lineups')->select('name','slug','image','bio','description')->where('lineups_type', 'CURATOR')->limit(2)->get();
+        $kurator = DB::table('lineups')->select('name','slug','image','bio','description', 'lineups_type')->where('lineups_type', 'LIKE', '%CURATOR%')->limit(2)->get();
         $content = PageContent::select('title','slug','image','url', 'class_add')->where(['id_page'=> $page->id, 'status'=>1])->get();
         return view('about')->with(compact('faq','kurator', 'content'));
     }
-
 
     public function gallery(){
         $route = 'gallery';
@@ -59,7 +60,7 @@ class IndexController extends Controller
         $exclusive = Gallery::select('title','slug','image','year','dateshow','description')->where(['exclusive' => 1])->limit(3)->get();
         $galyz3 = Gallery::select('title','slug','image','year','dateshow','description')->inRandomOrder()->limit(3)->get();
         if($galy){
-    	   return view('gallery')->with(compact('galy','galyz3', 'exprev', 'exclusive'));
+           return view('gallery')->with(compact('galy','galyz3', 'exprev', 'exclusive'));
         }else{
             abort(404);
         }
@@ -69,7 +70,7 @@ class IndexController extends Controller
         $route = 'Lineups';
         $page = Page::select('id')->where('title', $route)->first();
         $list = PageContent::select('title','slug','tagline','class_add')->where(['id_page'=> $page->id, 'status'=>1])->get();
-    	return view('lineups')->with(compact('list'));
+        return view('lineups')->with(compact('list'));
     }
 
     public function lineupsDetail($slug=null){
@@ -95,25 +96,20 @@ class IndexController extends Controller
     }
 
     public function getLineups($stage){
-       $stage = DB::table('lineups')->select('name','slug','image','status')->where('lineups_type', $stage)->where('lineups_type','<>','CURATOR')->where(['status'=>'1'])->get();
+       $stage = DB::table('lineups')->select('name','slug','image','status')->where('lineups_type', $stage)->where('lineups_type','<>','CURATOR')->where(['status'=>'1'])->orderBy('position')->get();
         if(count($stage)) {
             return response()->json(['data'=>$stage]);
-            // return response()->(['data'=>json_encode(($stage)), 'pagination' => $stage->links()]);
         }else{
            return response()->json('empty');
-            
-           
         }
     }
 
     public function firstLineups($stage){
-        $stage = DB::table('lineups')->select('name','slug','image','status')->where('lineups_type', $stage)->where('lineups_type','<>','CURATOR')->where(['status'=>'1'])->get();
+        $stage = DB::table('lineups')->select('name','slug','image','status')->where('lineups_type', $stage)->where('lineups_type','<>','CURATOR')->where(['status'=>'1'])->orderBy('position')->get();
         if(count($stage)) {
             return response()->json(['data'=>$stage]);
         }else{
            return response()->json('empty');
-            
-           
         }
     }
 
@@ -167,4 +163,43 @@ class IndexController extends Controller
         $terms = PageContent::select('title','slug','tagline','class_add', 'content')->where(['id_page'=> $page->id, 'status'=>1])->get();
         return view('terms')->with(compact('terms'));
     }
+
+    public function promo(){
+        $route = 'promo';
+        $page = Page::select('id')->where('title', $route)->where('status', '1')->first();
+        if($page){
+            return view('promo');
+        }else{
+            abort(404);
+        }
+    }
+
+    public function promoDate($date){
+          $datelist = DB::table('promo')->select('url')->where('date_active', $date)->where(['status'=>'1'])->inRandomOrder()->limit(1)->get();
+        if($datelist){
+            // return response()->json('yes');
+            return response($datelist, 200,  ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
+            return view('promo');
+        }else{
+            abort(404);
+        }
+    }
+
+    public function getQrcode($code){
+        $url = $code;
+        $promo = DB::table('promo')->select('url', 'code_promo', 'status', 'reedem_status')->where('url', $url)->where(['status'=>'1', 'reedem_status'=>'valid'])->limit(1)->get();
+        if(count($promo)){
+            return response($promo, 200);
+        }else{
+            abort(404);
+        }
+    }
+
+    public function getBooklet($file)
+    {
+        $file_path = ('uploads/files/'.$file);
+        return response()->download($file_path);
+    }
+
+
 }

@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="col-9 col-xs-10 col-sm-9 col-md-8">
-                        <a id="btn-ticket" class="btn" onclick="dataLayer.push({'event': 'ticket','event_category':'/','event_action': 'Ticket','event_label': 'Secure Your Ticket'});">
+                        <a target="_blank" href="https://kiostix.com/id/event/731/wave-of-tomorrow" id="btn-ticket" class="btn" onclick="dataLayer.push({'event': 'ticket','event_category':'/','event_action': 'Ticket','event_label': 'Secure Your Ticket'});">
                             <img class="img-fluid btn-img" src="{{ asset('./uploads/images/ticket/secure-ticket-shadow.png') }}">
                         </a>
                     </div>
