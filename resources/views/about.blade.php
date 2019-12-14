@@ -81,7 +81,7 @@
                                 <div class="row">
                                     <div id="title-curator" class="col-sm-6 col-md-12 text-white my-3">
                                         <h2 class="mt-3">{{ $kurs->name }}</h2>
-                                        <p class="uppercase font-color-grey">CURATOR</p>
+                                        <p class="uppercase font-color-grey">{{ $kurs->lineups_type }}</p>
                                     </div>
                                     <div class="col-md-12 text-white">
                                         <div class="mt-3 justify">{!! $kurs->bio !!}</div>
@@ -92,7 +92,7 @@
                                 <div class="row no-gutters align-items-end">
                                     <div id="title-curator" class="col-sm-6 text-white align-text-bottom">
                                         <h2>{{ $kurs->name }}</h2>
-                                        <p class="uppercase font-color-grey">CURATOR</p>
+                                        <p class="uppercase font-color-grey">{{ $kurs->lineups_type }}</p>
                                     </div>
                                 </div>
                             </div>
