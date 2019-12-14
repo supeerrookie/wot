@@ -22,7 +22,22 @@ Route::get('/lineups/', 'IndexController@lineups');
 Route::get('/schedule/', 'IndexController@schedule');
 
 Route::get('/terms-condition/', 'IndexController@terms');
-	
+
+Route::get('/booklet/{file}', 'IndexController@getBooklet');
+
+Route::prefix('promo')->group(function () {
+    Route::get('/', 'IndexController@promo',function($code){
+
+    });
+    Route::get('{date}', 'IndexController@promoDate',function($code){
+
+    });
+
+    Route::get('/getcode/{code}', 'IndexController@getQrcode',function($code){
+
+    });
+});
+    
 Route::get('/schedule/{type}', 'IndexController@firstSchedule', function ($type) { 
 
 });
@@ -31,9 +46,7 @@ Route::get('/lineups/{stage}', 'IndexController@firstLineups', function ($stage)
 
 });
 
-
 Route::get('/schedule/{type}/{slam}', 'IndexController@getSchedule');
-// Route::get('/lineups/{stage}', 'IndexController@getLineups')->where('stage', '[A-Za-z]+');
 
 Route::get('/lineups/{}', function() {
     abort(404);
@@ -43,7 +56,7 @@ Route::get('/lineups/{}', function() {
 Route::group([
     'prefix' => 'lineups', 
     'where' => [
-    	'stage' => 'sight|show|talks'
+        'stage' => 'sight|show|talks'
     ],
 ], function () {
     Route::get('{stage}', 'IndexController@getLineups')->where('stage', '[A-Za-z]+');
@@ -60,5 +73,5 @@ Route::any('{catchall}', function() {
 })->where('catchall', '.*');
 
 Route::fallback(function () {
-	abort(404);
+    abort(404);
 });
