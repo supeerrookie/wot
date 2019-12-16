@@ -197,8 +197,15 @@ class IndexController extends Controller
 
     public function getBooklet($file)
     {
-        $file_path = ('uploads/files/'.$file);
-        return response()->download($file_path);
+        if($file){
+            $file_path = ('uploads/files/'.$file);
+            $headers = [
+              'Content-Type' => 'application/pdf',
+            ];
+            return response()->download($file_path, 'e-booklet.pdf', $headers);
+        }else{
+           abort(404);
+        }
     }
 
 
