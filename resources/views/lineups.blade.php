@@ -3,7 +3,7 @@
 <div id="main-inside" class="main-inside fullheight active">
     <div id="lineups" class="main-slider overlay active">
         <div class="bgimg bg-fixed bg-desktop bg-animate-slide opacity-85 bg-lineups"></div>
-        <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-lineups-mobile parallax"></div>
+        <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-lineups-mobile"></div>
         <div id="headerChild" class="header">
             <div class="container">
                 <div class="row no-gutters">
