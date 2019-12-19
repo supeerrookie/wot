@@ -30,6 +30,8 @@ use App\PageContent;
 
 use App\Schedule;
 
+use App\Promo;
+
 use Response;
 
 class IndexController extends Controller
@@ -164,38 +166,91 @@ class IndexController extends Controller
         return view('terms')->with(compact('terms'));
     }
 
-    public function promo(){
+    public function promo($validate){
+        $data = base64_decode($validate);
         $route = 'promo';
         $page = Page::select('id')->where('title', $route)->where('status', '1')->first();
-        if($page){
-            return view('promo');
+        $date = Carbon::now()->setTime(23,59,59)->format('Y-m-d');
+        $datelist = DB::table('promo')->where('date_active', $date)->where(['status'=>'1'])->limit(1)->get();
+        if($data === 'getpromowaveoftomorrow2019'){
+            if($datelist) {
+                if($page){
+                    return view('promo');
+                }else{
+                    abort(404);
+                }
+            }else{
+                return view('errors.error');
+            }
         }else{
-            abort(404);
+            return view('errors.error');
         }
     }
 
-    public function promoDate($date){
-          $datelist = DB::table('promo')->select('url')->where('date_active', $date)->where(['status'=>'1'])->inRandomOrder()->limit(1)->get();
-        if($datelist){
-            // return response()->json('yes');
-            return response($datelist, 200,  ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
-            return view('promo');
+    public function detectDevices($validate, $devices){
+        $data = base64_decode($validate);
+        $promo  = Promo::Where('uuid', $devices)->first();
+        if($data === 'getpromowaveoftomorrow2019'){
+            if($promo){
+                return response()->json(['status'=>'detected', $promo]);
+            }else{
+                return response()->json('valid');
+            }
         }else{
-            abort(404);
+            return view('errors.error');
         }
     }
 
-    public function getQrcode($code){
+    public function promoDate($validate, $date){
+        $data = base64_decode($validate);
+        $datelist = DB::table('promo')->select('url')->where('date_active', $date)->where(['status'=>'1'])->inRandomOrder()->limit(1)->get();
+        if($data === 'getpromowaveoftomorrow2019'){
+            if(count($datelist)){
+                return response($datelist, 200,  ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'], JSON_UNESCAPED_UNICODE);
+                return view('promo');
+            }
+            else{
+                return response()->json('empty');
+            }
+        }else{
+            return view('errors.error');
+        }
+    }
+
+    public function getQrcode($validate, $code){
         $url = $code;
-        $promo = DB::table('promo')->select('url', 'code_promo', 'status', 'reedem_status')->where('url', $url)->where(['status'=>'1', 'reedem_status'=>'valid'])->limit(1)->get();
-        if(count($promo)){
-            return response($promo, 200);
+        $data = base64_decode($validate);
+        $promo = DB::table('promo')->select('url', 'code_promo', 'status', 'code_reedem_status')->where('url', $url)->where(['status'=>'1', 'code_reedem_status'=>'1'])->limit(1)->get();
+        if($data === 'getpromowaveoftomorrow2019'){
+            if(count($promo)){
+                return response($promo, 200);
+            }else{
+                return response('empty');
+            }
         }else{
-            abort(404);
+            return view('errors.error');
         }
     }
 
-    public function getBooklet($file)
+    public function saveDevices($validate, $code, $devices){
+        $data = base64_decode($validate);
+        $promo = DB::table('promo')->select('code_promo', 'status', 'code_reedem_status')->where('code_promo', $code)->where(['status'=>'1', 'code_reedem_status'=>'1'])->limit(1)->get();
+        if($data === 'getpromowaveoftomorrow2019'){
+            if(count($promo)){
+                $update =  Promo::where('code_promo', $code)->first();
+                $update->uuid = $devices;
+                $update->status = 0;
+                $update->save();
+                return response('yes');
+            }else{
+                return response('empty');
+            }
+        }else{
+            return view('errors.error');
+        }
+    }
+
+    public function getBook($file)
     {
         if($file){
             $file_path = ('uploads/files/'.$file);
@@ -206,6 +261,10 @@ class IndexController extends Controller
         }else{
            abort(404);
         }
+    }
+
+    public function timeout(){
+        return view('errors.error');
     }
 
 

@@ -18,6 +18,7 @@ Route::group([
     $router->resource('/faq', FaqController::class);
     $router->resource('/gallery', GalleryController::class);
     $router->resource('/schedule', ScheduleController::class);
+    $router->resource('/promo', PromoController::class);
     $router->resource('/page-content', PageContentController::class);
 
     $router->get("/api/getlineups", "LineupsController@getLineups");
