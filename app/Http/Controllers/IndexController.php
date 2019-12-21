@@ -58,8 +58,8 @@ class IndexController extends Controller
         $route = 'gallery';
         $page = Page::select('id')->where('title', $route)->first();
         $exprev = PageContent::select('title','slug','tagline','class_add')->where(['id_page'=> $page->id, 'status'=>1])->get();
-        $galy = Gallery::select('title','slug','image','year','dateshow','description')->orderBy('year', 'asc')->where(['exclusive' => 0])->get();
-        $exclusive = Gallery::select('title','slug','image','year','dateshow','description')->where(['exclusive' => 1])->limit(3)->get();
+        $galy = Gallery::select('title','slug','image','year','dateshow','description')->orderBy('year', 'desc')->where(['exclusive' => 0])->get();
+        $exclusive = Gallery::select('title','slug','image','year','dateshow','description')->where(['exclusive' => 1])->orderBy('year', 'desc')->limit(3)->get();
         $galyz3 = Gallery::select('title','slug','image','year','dateshow','description')->inRandomOrder()->limit(3)->get();
         if($galy){
            return view('gallery')->with(compact('galy','galyz3', 'exprev', 'exclusive'));

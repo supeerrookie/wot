@@ -39,7 +39,8 @@ Route::prefix('promo')->group(function () {
 
     });
 
-    Route::get('/{validate}/devices/{devices}', 'IndexController@detectDevices',function($validate, $devices){
+    
+    Route::get('/{validate}/devices/{devices}/date/{date}', 'IndexController@detectDevices',function($validate, $devices, $date){
 
     });
 

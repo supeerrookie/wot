@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 @section('content')
 <div class="bgimg bg-fixed bg-desktop bg-animate-slide opacity-85 bg-artist-detail"></div>
-<div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-artist-detail-mobile parallax"></div>
+<div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-artist-detail-mobile"></div>
 <div id="artistDetail" class="wrapper">
     <div id="headerChild" class="header">
         <div class="container">

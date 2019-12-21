@@ -28,7 +28,7 @@ class PromoController extends AdminController
     {
         $grid = new Grid(new Promo);
         $getdate = Carbon::now()->toDateString();
-        $grid->quickSearch('code_promo');
+        $grid->quickSearch('code_promo', 'code_reedem_status', 'date_active');
         $grid->id('ID');
         $grid->uuid('Device Code');
         $grid->url('URL');
@@ -47,6 +47,22 @@ class PromoController extends AdminController
         $grid->status()->switch($states);
         $grid->created_at('Create At')->date('Y-m-d');
         $grid->updated_at('Update At')->date('Y-m-d');
+        $grid->filter(function($filter){
+            $filter->like('code_promo', 'Code Promo');
+            $filter->like('date_active', 'Date Active Promo');
+            $filter->equal('status', 'Status URL')->radio([
+                ''   => 'All',
+                0    => 'NO',
+                1    => 'YES',
+            ]);
+            $filter->equal('code_reedem_status', 'Status Reedem Code')->radio([
+                ''   => 'All',
+                0    => 'NO',
+                1    => 'VALID',
+            ]);
+            $filter->like('date_redeem', 'Date Redeem Promo');
+
+        });
         return $grid;
     }
 

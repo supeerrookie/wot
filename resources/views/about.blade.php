@@ -2,7 +2,7 @@
 @section('content')
 <div id="main-inside" class="main-inside fullheight active">
     <div class="bgimg bg-fixed bg-desktop bg-animate-slide bg-about opacity-85"></div>
-    <div class="bgimg bg-fixed bg-mobile bg-animate-slide bg-about-mobile opacity-85 parallax"></div>
+    <div class="bgimg bg-fixed bg-mobile bg-animate-slide bg-about-mobile opacity-85"></div>
     <div id="about" class="main-slider overlay active">
         <div id="headerChild" class="header">
             <div class="container">

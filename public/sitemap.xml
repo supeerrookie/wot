@@ -1,69 +1,279 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
    <url>
-      <loc>https://www.waveoftomorrow.id/</loc>
-      <lastmod>2019-11-12</lastmod>
+      <loc>https://www.waveoftomorrow.id</loc>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.waveoftomorrow.id/about/</loc>
-      <lastmod>2019-11-12</lastmod>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.waveoftomorrow.id/terms-condition/</loc>
-      <lastmod>2019-11-12</lastmod>
+      <loc>https:waveoftomorrow.id/gallery/</loc>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.waveoftomorrow.id/artist-detail/notanlab</loc>
-      <lastmod>2019-11-12</lastmod>
+      <loc>https:waveoftomorrow.id/lineups/</loc>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.waveoftomorrow.id/artist-detail/rubi-roesli</loc>
-      <lastmod>2019-11-12</lastmod>
+      <loc>https://www.waveoftomorrow.id/artist-detail/OUCHHH</loc>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/tundra</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/nonotak</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/jakob-steensen</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/maika</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/sembilan-matahari</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/kinara-darma-x-modulight</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/rubi-roesli-biroe</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.waveoftomorrow.id/artist-detail/motion-beast</loc>
-      <lastmod>2019-11-12</lastmod>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/notanlab</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.waveoftomorrow.id/artist-detail/u-visual</loc>
-      <lastmod>2019-11-12</lastmod>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
-   </url>
-   <url>
-      <loc>https://www.waveoftomorrow.id/artist-detail/farhanaz</loc>
-      <lastmod>2019-11-12</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.waveoftomorrow.id/artist-detail/ricky-janitra</loc>
-      <lastmod>2019-11-12</lastmod>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/farhanaz</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/haai</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/kunto-aji</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/eva-celia</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/danilla</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/elephant-kind</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/sal-priadi</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/petra-sihombing</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/anton-wirjono-future10</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/dekadenz</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/mantra-vutura</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/sunmantra</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/random-brothers</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/enrico-octaviano</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/hondo</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/preachjacrew</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/gabber-modus-operandi</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/mr-joyful-noise</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/where-s-anja</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>hhttps://www.waveoftomorrow.id/artist-detail/django</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/bergas</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/merdi</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/arvin</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/kimo</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/bing-luther</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/naika-gaeri</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://www.waveoftomorrow.id/artist-detail/belda</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
    </url>
    <url>
       <loc>https://www.waveoftomorrow.id/schedule/</loc>
-      <lastmod>2019-11-12</lastmod>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.waveoftomorrow.id/lineups/</loc>
-      <lastmod>2019-11-12</lastmod>
+      <loc>https://www.waveoftomorrow.id/terms-condition/</loc>
+      <lastmod>2019-12-19</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.5</priority>
+      <priority>1.0</priority>
    </url>
-</urlset>
+   <url>
+      <loc>https://www.waveoftomorrow.id/about/#faq</loc>
+      <lastmod>2019-12-19</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   </urlset>

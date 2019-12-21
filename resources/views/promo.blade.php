@@ -2,7 +2,7 @@
 @section('content')
 <div id="promo" class="wrapper">
     <div class="bgimg bg-fixed bg-desktop bg-animate-slide opacity-85 bg-promo active"></div>
-    <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-promo-mobile parallax"></div>
+    <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-promo-mobile"></div>
     <div class="">
         <div class="container">
             <div class="row no-gutters">

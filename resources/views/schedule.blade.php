@@ -2,8 +2,8 @@
 @section('content')
 <div id="main-inside" class="main-inside fullheight active">
     <div id="schedule" class="overlay active">
-        <div class="bgimg bg-desktop opacity-85 bg-animate-slide bg-schedule parallax"></div>
-        <div class="bgimg bg-mobile opacity-85 bg-animate-slide bg-schedule-mobile parallax"></div>
+        <div class="bgimg bg-desktop opacity-85 bg-animate-slide bg-schedule"></div>
+        <div class="bgimg bg-mobile opacity-85 bg-animate-slide bg-schedule-mobile"></div>
         <div id="headerChild" class="header">
            <div class="container">
                 <div class="row no-gutters">

@@ -1,8 +1,8 @@
 @extends('layouts.main-layout')
 @section('content')
 <div id="homepage" class="overlay active">
-    <div class="bgimg lazy bg-fixed bg-desktop opacity-85 bg-homepageVideo bg-animate-homepage parallax"></div>
-    <div class="bgimg lazy bg-fixed bg-mobile opacity-85 bg-homepageVideo-mobile bg-animate-homepage parallax"></div>
+    <div class="bgimg lazy bg-fixed bg-desktop opacity-85 bg-homepageVideo bg-animate-homepage"></div>
+    <div class="bgimg lazy bg-fixed bg-mobile opacity-85 bg-homepageVideo-mobile bg-animate-homepage"></div>
     <div class="header homepage">
         <div class="container">
             <div class="row no-gutters">
