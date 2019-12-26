@@ -118,7 +118,7 @@ class IndexController extends Controller
     public function getSchedule($type){
         $skutt = DB::table('schedule')
             ->join('lineups', 'schedule.id_lineups', '=', 'lineups.id')
-            ->select('schedule.id','schedule.id_lineups', 'lineups.name','schedule.dateperform','schedule.stage','schedule.timeperform','schedule.class_add', 'lineups.lineups_type')->where(['lineups.lineups_type' => $type, 'schedule.status'=>'1'])->orderBy('dateperform')->orderBy('timeperform')
+            ->select('schedule.id','schedule.id_lineups', 'lineups.name','schedule.dateperform','schedule.stage','schedule.timeperform','schedule.class_add', 'lineups.lineups_type', 'lineups.detail')->where(['lineups.lineups_type' => $type, 'schedule.status'=>'1'])->orderBy('dateperform')->orderBy('timeperform')
             ->get();
 
         $list = $skutt->groupBy(function($j) {
@@ -144,7 +144,7 @@ class IndexController extends Controller
     public function firstSchedule($type){
         $skutt = DB::table('schedule')
             ->join('lineups', 'schedule.id_lineups', '=', 'lineups.id')
-            ->select('lineups.name','schedule.dateperform', 'schedule.timeperform','schedule.class_add', 'lineups.lineups_type','lineups.slug')->where(['lineups.lineups_type' => $type, 'schedule.status'=>'1'])->orderBy('dateperform')->orderBy('timeperform')
+            ->select('lineups.name','schedule.dateperform', 'schedule.timeperform','schedule.class_add', 'lineups.lineups_type','lineups.slug', 'lineups.detail')->where(['lineups.lineups_type' => $type, 'schedule.status'=>'1'])->orderBy('dateperform')->orderBy('timeperform')
             ->get();
 
         $list = $skutt->groupBy(function($j) {

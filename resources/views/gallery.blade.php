@@ -3,7 +3,7 @@
 <div id="main-inside" class="main-inside fullheight active">
     <div id="gallery" class="overlay active">
         <div class="bgimg bg-fixed bg-desktop bg-animate-slide opacity-85 bg-gallery"></div>
-        <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-gallery-mobile parallax"></div>
+        <div class="bgimg bg-fixed bg-mobile bg-animate-slide opacity-85 bg-gallery-mobile"></div>
         <div id="headerChild" class="header">
             <div class="container">
                 <div class="row no-gutters">
