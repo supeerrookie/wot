@@ -48,11 +48,11 @@ return [
     */
     'route' => [
 
-        'prefix' => env('ADMIN_ROUTE_PREFIX', 'painkillers'),
+        // 'prefix' => env('ADMIN_ROUTE_PREFIX', 'painkillers'),
 
-        'namespace' => 'App\\Admin\\Controllers',
+        // 'namespace' => 'App\\Admin\\Controllers',
 
-        'middleware' => ['web', 'admin'],
+        'middleware' => ['web'],
     ],
 
     /*
